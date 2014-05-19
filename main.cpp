@@ -113,7 +113,11 @@ TEST(BaseClass, BitOperations) {
     b.SetBitInS(5);
     EXPECT_EQ(b.GetS(), 32);
 
+    b.SetBitInS(2);
+    EXPECT_EQ(b.GetS(), 36);
+
     EXPECT_TRUE(b.IsSetBitInS(5));
+    EXPECT_TRUE(b.IsSetBitInS(2));
     EXPECT_FALSE(b.IsSetBitInS(3));
 
     EXPECT_TRUE(b.IsEvenS());

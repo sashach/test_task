@@ -113,11 +113,7 @@ TEST(BaseClass, BitOperations) {
     b.SetBitInS(5);
     EXPECT_EQ(b.GetS(), 32);
 
-    b.SetBitInS(2);
-    EXPECT_EQ(b.GetS(), 36);
-
     EXPECT_TRUE(b.IsSetBitInS(5));
-    EXPECT_TRUE(b.IsSetBitInS(2));
     EXPECT_FALSE(b.IsSetBitInS(3));
 
     EXPECT_TRUE(b.IsEvenS());
@@ -139,15 +135,15 @@ TEST(DataStorageTest, algorithm) {
     EXPECT_EQ(s.GetDataAt(3), 24);
 	EXPECT_THROW(s.GetDataAt(10), std::logic_error);
 
-    s.SortData();
-    EXPECT_EQ(s.GetDataAt(0), 2);
-    EXPECT_EQ(s.GetDataAt(1), 11);
+    s.SortData(); // sorting descending
+    EXPECT_EQ(s.GetDataAt(0), 31);
+    EXPECT_EQ(s.GetDataAt(1), 24);
     EXPECT_EQ(s.GetDataAt(2), 16);
-    EXPECT_EQ(s.GetDataAt(3), 24);
-    EXPECT_EQ(s.GetDataAt(4), 31);
+    EXPECT_EQ(s.GetDataAt(3), 11);
+    EXPECT_EQ(s.GetDataAt(4), 2);
 
     EXPECT_EQ(s.FindItemPosition(99), -1);
-    EXPECT_EQ(s.FindItemPosition(24), 3);
+    EXPECT_EQ(s.FindItemPosition(24), 1);
 }
 
 using namespace MyNamespace;

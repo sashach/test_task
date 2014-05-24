@@ -18,6 +18,7 @@
 #include <cstdio>
 #include <stdexcept>
 using std::size_t;
+#include <vector>
 
 /*-----------------------------------------------------------------------------
  *  You can edit this file to complete all test tasks.
@@ -59,7 +60,13 @@ public:
  */
 class StorageClass
 {
-
+    std::vector<int> data_;
+public:
+    void SetData(const std::vector<int> &data);
+    size_t GetDataSize() const;
+    int GetDataAt(size_t index) const throw (std::logic_error);
+    void SortData();
+    size_t FindItemPosition(int item);
 }; /* -----  end of class StorageClass  ----- */
 
 

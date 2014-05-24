@@ -33,6 +33,9 @@
  */
 BaseClass::BaseClass ()  
 {
+    setS(10);
+    setBufferSize(0);
+    setBuffer(nullptr);
 }  /* -----  end of method BaseClass::BaseClass  (constructor)  ----- */
 
 int32_t BaseClass::GetS()

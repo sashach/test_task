@@ -34,9 +34,8 @@
 BaseClass::BaseClass ()  
 {
     SetS(10);
-    SetBufferSize(0);
-    SetBuffer(nullptr);
-}  /* -----  end of method BaseClass::BaseClass  (constructor)  ------------- */
+    SetBuffer(nullptr, 0);
+} /* -----  end of method BaseClass::BaseClass  (constructor)  -------------- */
 
 /*
  *------------------------------------------------------------------------------

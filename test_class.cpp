@@ -45,7 +45,7 @@ BaseClass::BaseClass ()
  * Description:  gets value of s_
  *------------------------------------------------------------------------------
  */
-int32_t BaseClass::GetS()
+int32_t BaseClass::GetS() const
 {
     return s_;
 } /* -----  end of method BaseClass::GetS  (gets value of s_)  -------------- */
@@ -57,7 +57,7 @@ int32_t BaseClass::GetS()
  * Description:  gets value of size_
  *------------------------------------------------------------------------------
  */
-size_t BaseClass::GetBufferSize()
+size_t BaseClass::GetBufferSize() const
 {
     return size_;
 } /* -----  end of method BaseClass::GetBufferSize  (gets value of size_)  -- */
@@ -69,7 +69,7 @@ size_t BaseClass::GetBufferSize()
  * Description:  gets value of pointer buffer_
  *------------------------------------------------------------------------------
  */
-char* BaseClass::GetBuffer()
+char* BaseClass::GetBuffer() const
 {
     return buffer_;
 } /* -----  end of method BaseClass::GetBufferSize  (gets value of pointer 

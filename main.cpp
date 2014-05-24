@@ -35,11 +35,11 @@ TEST(BaseClass, sizeof) {
     EXPECT_EQ(b.GetBuffer(), nullptr);
 }
 
-//TEST(BaseClass, Initialisation) {
-//    BaseClass b;
-//    EXPECT_EQ(b.GetS(), 10);
-//}
-//
+TEST(BaseClass, Initialisation) {
+    BaseClass b;
+    EXPECT_EQ(b.GetS(), 10);
+}
+
 //TEST(BaseClass, Copy) {
 //
 //    BaseClass b(20);

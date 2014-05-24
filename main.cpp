@@ -99,27 +99,27 @@ TEST(BaseClass, Destructor) {
     EXPECT_STRNE(c, test_string);
 }
 
-//TEST(BaseClass, Limits) {
-//    BaseClass b;
-//
-//	EXPECT_THROW(b.SetBuffer(0, 10), std::logic_error);
-//	EXPECT_THROW(b.SetBuffer(test_string, 0), std::logic_error);
-//	EXPECT_THROW(b.SetBuffer(test_string, std::numeric_limits< size_t >::max()), std::logic_error);
-//}
-//
-//TEST(BaseClass, BitOperations) {
-//    BaseClass b(0);
-//
-//    b.SetBitInS(5);
-//    EXPECT_EQ(b.GetS(), 32);
-//
-//    EXPECT_TRUE(b.IsSetBitInS(5));
-//    EXPECT_FALSE(b.IsSetBitInS(3));
-//
-//    EXPECT_TRUE(b.IsEvenS());
-//    b.SetS(11);
-//    EXPECT_FALSE(b.IsEvenS());
-//}
+TEST(BaseClass, Limits) {
+    BaseClass b;
+
+	EXPECT_THROW(b.SetBuffer(0, 10), std::logic_error);
+	EXPECT_THROW(b.SetBuffer(test_string, 0), std::logic_error);
+	EXPECT_THROW(b.SetBuffer(test_string, std::numeric_limits< size_t >::max()), std::logic_error);
+}
+
+TEST(BaseClass, BitOperations) {
+    BaseClass b(0);
+
+    b.SetBitInS(5);
+    EXPECT_EQ(b.GetS(), 32);
+
+    EXPECT_TRUE(b.IsSetBitInS(5));
+    EXPECT_FALSE(b.IsSetBitInS(3));
+
+    EXPECT_TRUE(b.IsEvenS());
+    b.SetS(11);
+    EXPECT_FALSE(b.IsEvenS());
+}
 //
 //TEST(DataStorageTest, algorithm) {
 //    StorageClass s;

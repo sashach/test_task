@@ -25,6 +25,7 @@
 #include <cstring>
 #include <limits>
 #include <bitset>
+#include <algorithm>
 
 /*
  *------------------------------------------------------------------------------
@@ -217,11 +218,73 @@ bool BaseClass::IsEvenS() const
 /*
  *------------------------------------------------------------------------------
  *       Class:  StorageClass
- *      Method:  StorageClass
- * Description:  constructor
+ *      Method:  SetData
+ * Description:  sets data_ to data's value
  *------------------------------------------------------------------------------
  */
-//StorageClass::StorageClass ()
-//{
-//}  /* -----  end of method StorageClass::StorageClass  (constructor)  ----- */
+void StorageClass::SetData(const std::vector<int>& data)
+{
+    data_ = data;
+} /* -----  end of method StorageClass::SetData (sets data_ to data's value)  */
 
+/*
+ *------------------------------------------------------------------------------
+ *       Class:  StorageClass
+ *      Method:  GetDataSize
+ * Description:  gets data_'s size
+ *------------------------------------------------------------------------------
+ */
+size_t StorageClass::GetDataSize() const
+{
+    return data_.size();
+} /* -----  end of method StorageClass::GetDataSize (gets data_'s size) ----  */
+
+/*
+ *------------------------------------------------------------------------------
+ *       Class:  StorageClass
+ *      Method:  GetDataAt
+ * Description:  gets value of data_'s element
+ *------------------------------------------------------------------------------
+ */
+int StorageClass::GetDataAt(size_t index) const throw (std::logic_error)
+{
+    if(index >= GetDataSize())
+    {
+        throw std::logic_error("Index is out of range.");
+    }
+    return data_.at(index);
+} /* -----  end of method StorageClass::GetDataAt (gets value of data_'s 
+   *        element) -------------------------------------------------------  */
+
+/*
+ *------------------------------------------------------------------------------
+ *       Class:  StorageClass
+ *      Method:  SortData
+ * Description:  sorts data in descending order
+ *------------------------------------------------------------------------------
+ */
+void StorageClass::SortData()
+{
+    std::sort(data_.begin(), data_.end(), std::greater<int>());
+} /* -----  end of method StorageClass::SortData (sorts data in descending 
+   *        order) ---------------------------------------------------------  */
+
+/*
+ *------------------------------------------------------------------------------
+ *       Class:  StorageClass
+ *      Method:  FindItemPosition
+ * Description:  finds item's value in data_, if found returns it's index, else
+ *               returns -1
+ *------------------------------------------------------------------------------
+ */
+size_t StorageClass::FindItemPosition(int item)
+{
+    std::vector<int>::iterator find_iterator = 
+        std::find(data_.begin(), data_.end(), item);
+    if(find_iterator == data_.end())
+    {
+        return -1;
+    }
+    return find_iterator - data_.begin();
+} /* -----  end of method StorageClass::FindItemPosition (find's item's value 
+   *        in data_, if found returns it's index, else returns -1) --------  */

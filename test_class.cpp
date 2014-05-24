@@ -50,6 +50,19 @@ BaseClass::BaseClass(int32_t s)
     SetBuffer(nullptr, 0);
 } /* -----  end of method BaseClass::BaseClass  (constructor that sets s_ to 
    *        inputed value)  ------------------------------------------------- */
+
+/*
+ *------------------------------------------------------------------------------
+ *       Class:  BaseClass
+ *      Method:  BaseClass(const BaseClass& original)
+ * Description:  copy constructor
+ *------------------------------------------------------------------------------
+ */
+BaseClass::BaseClass(const BaseClass& original)
+{
+    SetS(original.GetS());
+    SetBuffer(original.GetBuffer(), original.GetBufferSize());
+} /* -----  end of method BaseClass::BaseClass (copy constructor)  ---------- */
  *      Method:  GetS
  * Description:  gets value of s_
  *------------------------------------------------------------------------------

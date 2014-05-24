@@ -85,20 +85,20 @@ TEST(BaseClass, Buffer) {
     EXPECT_STRNE(b.GetBuffer(), d.GetBuffer());
 }
 
-//TEST(BaseClass, Destructor) {
-//
-//    BaseClass *b = new BaseClass();
-//    b->SetBuffer(test_string, sizeof(test_string));
-//    EXPECT_STREQ(b->GetBuffer(), test_string);
-//
-//    const char * c = b->GetBuffer();
-//    EXPECT_STREQ(c, test_string);
-//
-//    delete b;
-//
-//    EXPECT_STRNE(c, test_string);
-//}
-//
+TEST(BaseClass, Destructor) {
+
+    BaseClass *b = new BaseClass();
+    b->SetBuffer(test_string, sizeof(test_string));
+    EXPECT_STREQ(b->GetBuffer(), test_string);
+
+    const char * c = b->GetBuffer();
+    EXPECT_STREQ(c, test_string);
+
+    delete b;
+
+    EXPECT_STRNE(c, test_string);
+}
+
 //TEST(BaseClass, Limits) {
 //    BaseClass b;
 //

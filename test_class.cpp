@@ -174,22 +174,45 @@ void BaseClass::SetBuffer(const char* buffer, const size_t size)
     }
 } /* -----  end of method BaseClass::SetBuffer  (sets buffer_ and size_) ---- */
 
+/*
+ *------------------------------------------------------------------------------
+ *       Class:  BaseClass
+ *      Method:  SetBitInS
+ * Description:  sets bit of s_ with inputed number
+ *------------------------------------------------------------------------------
+ */
 void BaseClass::SetBitInS(const size_t bit_number)
 {
     int32_t bit_to_set = 1;
     bit_to_set = bit_to_set << bit_number;
     SetS(GetS() | bit_to_set);
-}
+} /* -----  end of method BaseClass::SetBitInS  (sets bit of s_ with 
+   *        inputed number) ------------------------------------------------- */
 
+/*
+ *------------------------------------------------------------------------------
+ *       Class:  BaseClass
+ *      Method:  IsSetBitInS
+ * Description:  checks if bit of s_ with inputted number is set
+ *------------------------------------------------------------------------------
+ */
 bool BaseClass::IsSetBitInS(const size_t bit_number) const
 {
     return std::bitset<sizeof(GetS())*8>(GetS()).test(bit_number);
-}
+} /* -----  end of method BaseClass::IsSetBitInS  (checks if bit of s_ with
+   *        inputted number is set) ----------------------------------------- */
 
+/*
+ *------------------------------------------------------------------------------
+ *       Class:  BaseClass
+ *      Method:  IsEvenS
+ * Description:  checks if s_ is even
+ *------------------------------------------------------------------------------
+ */
 bool BaseClass::IsEvenS() const
 {
     return GetS() % 2 == 0;
-}
+} /* -----  end of method BaseClass::IsEvenS  (checks if s_ is even) -------- */
 
 /*
  *------------------------------------------------------------------------------

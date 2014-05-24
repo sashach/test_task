@@ -38,9 +38,9 @@ public:
     int32_t GetS();
     size_t GetBufferSize();
     char* GetBuffer();
-    void setS(int32_t s);
-    void setBufferSize(size_t size);
-    void setBuffer(char* buffer);
+    void SetS(int32_t s);
+    void SetBufferSize(size_t size);
+    void SetBuffer(char* buffer);
     
 }; /* -----  end of class BaseClass  ----- */
 

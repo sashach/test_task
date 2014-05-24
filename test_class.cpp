@@ -82,7 +82,7 @@ const char* BaseClass::GetBuffer() const
  * Description:  gets s_
  *------------------------------------------------------------------------------
  */
-void BaseClass::SetS(int32_t s)
+void BaseClass::SetS(const int32_t s)
 {
     s_ = s;
 } /* -----  end of method BaseClass::SetS  (sets s_)  ----------------------- */

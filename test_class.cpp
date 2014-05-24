@@ -100,16 +100,34 @@ void BaseClass::SetBufferSize(size_t size)
 } /* -----  end of method BaseClass::SetBufferSize  (sets size_)  ----------- */
 
 /*
- *------------------------------------------------------------------------------
- *       Class:  BaseClass
  *      Method:  SetBuffer
- * Description:  sets buffer_
+ * Description:  sets buffer_ and size_
  *------------------------------------------------------------------------------
  */
-void BaseClass::SetBuffer(char* buffer)
+void BaseClass::SetBuffer(const char* buffer, const size_t size)
 {
-    buffer_ = buffer;
-} /* -----  end of method BaseClass::SetBuffer  (sets buffer_) -------------- */
+    if(buffer == nullptr)
+    {
+        buffer_ = nullptr;
+        size_ = 0;
+    }
+    if(buffer != GetBuffer())
+    {
+        delete buffer_;
+        buffer_ = 0;
+        buffer_ = new char[size + 1];
+        strncpy(buffer_, buffer, size);
+        buffer_[size] = '\0';
+    }
+    else if(size != GetBufferSize())
+    {
+        char* temporary_buffer = buffer_;
+        buffer_ = new char[size + 1];
+        strncpy(buffer_, buffer, size);
+        buffer_[size] = '\0';
+        delete temporary_buffer;
+    }
+} /* -----  end of method BaseClass::SetBuffer  (sets buffer_ and size_) ---- */
 
 /*
  *------------------------------------------------------------------------------

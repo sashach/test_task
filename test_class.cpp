@@ -90,16 +90,6 @@ void BaseClass::SetS(const int32_t s)
 /*
  *------------------------------------------------------------------------------
  *       Class:  BaseClass
- *      Method:  SetBufferSize
- * Description:  sets size_
- *------------------------------------------------------------------------------
- */
-void BaseClass::SetBufferSize(size_t size)
-{
-    size_ = size;
-} /* -----  end of method BaseClass::SetBufferSize  (sets size_)  ----------- */
-
-/*
  *      Method:  SetBuffer
  * Description:  sets buffer_ and size_
  *------------------------------------------------------------------------------

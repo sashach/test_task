@@ -69,7 +69,7 @@ size_t BaseClass::GetBufferSize() const
  * Description:  gets value of pointer buffer_
  *------------------------------------------------------------------------------
  */
-char* BaseClass::GetBuffer() const
+const char* BaseClass::GetBuffer() const
 {
     return buffer_;
 } /* -----  end of method BaseClass::GetBufferSize  (gets value of pointer 

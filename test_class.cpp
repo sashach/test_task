@@ -70,7 +70,7 @@ void BaseClass::setBuffer(char* buffer)
  * Description:  constructor
  *--------------------------------------------------------------------------------------
  */
-StorageClass::StorageClass ()
-{
-}  /* -----  end of method StorageClass::StorageClass  (constructor)  ----- */
+//StorageClass::StorageClass ()
+//{
+//}  /* -----  end of method StorageClass::StorageClass  (constructor)  ----- */
 

@@ -63,6 +63,22 @@ BaseClass::BaseClass(const BaseClass& original)
     SetS(original.GetS());
     SetBuffer(original.GetBuffer(), original.GetBufferSize());
 } /* -----  end of method BaseClass::BaseClass (copy constructor)  ---------- */
+
+/*
+ *------------------------------------------------------------------------------
+ *       Class:  BaseClass
+ *      Method:  ~BaseClass()
+ * Description:  destructor
+ *------------------------------------------------------------------------------
+ */
+BaseClass::~BaseClass()
+{
+    delete buffer_;
+} /* -----  end of method BaseClass::~BaseClass() (destructor)  ------------- */
+
+/*
+ *------------------------------------------------------------------------------
+ *       Class:  BaseClass
  *      Method:  GetS
  * Description:  gets value of s_
  *------------------------------------------------------------------------------

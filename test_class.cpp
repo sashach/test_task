@@ -35,6 +35,33 @@ BaseClass::BaseClass ()
 {
 }  /* -----  end of method BaseClass::BaseClass  (constructor)  ----- */
 
+int32_t BaseClass::GetS()
+{
+    return s_;
+}
+size_t BaseClass::GetBufferSize()
+{
+    return size_;
+}
+char* BaseClass::GetBuffer()
+{
+    return buffer_;
+}
+
+void BaseClass::setS(int32_t s)
+{
+    s_ = s;
+}
+
+void BaseClass::setBufferSize(size_t size)
+{
+    size_ = size;
+}
+
+void BaseClass::setBuffer(char* buffer)
+{
+    buffer_ = buffer;
+}
 
 /*
  *--------------------------------------------------------------------------------------

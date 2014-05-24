@@ -40,27 +40,27 @@ TEST(BaseClass, Initialisation) {
     EXPECT_EQ(b.GetS(), 10);
 }
 
-//TEST(BaseClass, Copy) {
-//
-//    BaseClass b(20);
-//    EXPECT_EQ(b.GetS(), 20);
-//
-//    BaseClass c = b;
-//    
-//    EXPECT_EQ(c.GetS(), 20);
-//}
-//
-//TEST(BaseClass, CopyConstructor) {
-//
-//    BaseClass b(30);
-//    EXPECT_EQ(b.GetS(), 30);
-//
-//    BaseClass c;
-//    c = b;
-//    
-//    EXPECT_EQ(c.GetS(), 30);
-//}
-//
+TEST(BaseClass, Copy) {
+
+    BaseClass b(20);
+    EXPECT_EQ(b.GetS(), 20);
+
+    BaseClass c = b;
+    
+    EXPECT_EQ(c.GetS(), 20);
+}
+
+TEST(BaseClass, CopyConstructor) {
+
+    BaseClass b(30);
+    EXPECT_EQ(b.GetS(), 30);
+
+    BaseClass c;
+    c = b;
+    
+    EXPECT_EQ(c.GetS(), 30);
+}
+
 //TEST(BaseClass, Buffer) {
 //
 //    BaseClass b;

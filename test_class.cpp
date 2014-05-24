@@ -143,17 +143,19 @@ void BaseClass::SetBuffer(const char* buffer, const size_t size)
     {
         delete buffer_;
         buffer_ = 0;
-        buffer_ = new char[size + 1];
+        buffer_ = new char[size];
         strncpy(buffer_, buffer, size);
         buffer_[size] = '\0';
+        size_ = size;
     }
     else if(size != GetBufferSize())
     {
         char* temporary_buffer = buffer_;
-        buffer_ = new char[size + 1];
+        buffer_ = new char[size];
         strncpy(buffer_, buffer, size);
         buffer_[size] = '\0';
         delete temporary_buffer;
+        size_ = size;
     }
 } /* -----  end of method BaseClass::SetBuffer  (sets buffer_ and size_) ---- */
 

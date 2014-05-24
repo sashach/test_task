@@ -33,7 +33,6 @@ class BaseClass
     int32_t s_;
     char* buffer_;
     size_t size_;
-    void SetS(const int32_t s);
 public:
     BaseClass();
     BaseClass(int32_t s);
@@ -43,6 +42,7 @@ public:
     size_t GetBufferSize() const;
     const char* GetBuffer() const;
     void SetBuffer(const char* buffer, const size_t size);
+    void SetS(const int32_t s);
 }; /* -----  end of class BaseClass  ----- */
 
 

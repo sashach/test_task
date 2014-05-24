@@ -40,6 +40,16 @@ BaseClass::BaseClass ()
 /*
  *------------------------------------------------------------------------------
  *       Class:  BaseClass
+ *      Method:  BaseClass(int32_t s)
+ * Description:  constructor that sets s_ to inputed value
+ *------------------------------------------------------------------------------
+ */
+BaseClass::BaseClass(int32_t s)
+{
+    SetS(s);
+    SetBuffer(nullptr, 0);
+} /* -----  end of method BaseClass::BaseClass  (constructor that sets s_ to 
+   *        inputed value)  ------------------------------------------------- */
  *      Method:  GetS
  * Description:  gets value of s_
  *------------------------------------------------------------------------------

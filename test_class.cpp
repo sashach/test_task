@@ -133,6 +133,7 @@ void BaseClass::SetS(const int32_t s)
  *------------------------------------------------------------------------------
  */
 void BaseClass::SetBuffer(const char* buffer, const size_t size)
+        throw (std::logic_error)
 {
     if(buffer == nullptr)
     {

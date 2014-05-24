@@ -16,6 +16,7 @@
 
 #include <cstdint>
 #include <cstdio>
+#include <stdexcept>
 using std::size_t;
 
 /*-----------------------------------------------------------------------------
@@ -41,7 +42,8 @@ public:
     int32_t GetS() const;
     size_t GetBufferSize() const;
     const char* GetBuffer() const;
-    void SetBuffer(const char* buffer, const size_t size);
+    void SetBuffer(const char* buffer, const size_t size) 
+            throw (std::logic_error);
     void SetS(const int32_t s);
 }; /* -----  end of class BaseClass  ----- */
 

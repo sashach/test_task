@@ -39,8 +39,7 @@ public:
     BaseClass();
     int32_t GetS() const;
     size_t GetBufferSize() const;
-    char* GetBuffer() const;
-    
+    const char* GetBuffer() const;
 }; /* -----  end of class BaseClass  ----- */
 
 

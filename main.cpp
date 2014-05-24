@@ -61,30 +61,30 @@ TEST(BaseClass, CopyConstructor) {
     EXPECT_EQ(c.GetS(), 30);
 }
 
-//TEST(BaseClass, Buffer) {
-//
-//    BaseClass b;
-//    b.SetBuffer(test_string, sizeof(test_string));
-//
-//    EXPECT_EQ(b.GetBufferSize(), sizeof(test_string));
-//    EXPECT_STREQ(b.GetBuffer(), test_string);
-//
-//    BaseClass c = b;
-//
-//    EXPECT_EQ(b.GetBufferSize(), c.GetBufferSize());
-//    EXPECT_STREQ(b.GetBuffer(), c.GetBuffer());
-//
-//    BaseClass d(b);
-//
-//    EXPECT_EQ(b.GetBufferSize(), d.GetBufferSize());
-//    EXPECT_STREQ(b.GetBuffer(), d.GetBuffer());
-//
-//    d.SetBuffer(new_string, sizeof(new_string));
-//
-//    EXPECT_NE(b.GetBufferSize(), d.GetBufferSize());
-//    EXPECT_STRNE(b.GetBuffer(), d.GetBuffer());
-//}
-//
+TEST(BaseClass, Buffer) {
+
+    BaseClass b;
+    b.SetBuffer(test_string, sizeof(test_string));
+
+    EXPECT_EQ(b.GetBufferSize(), sizeof(test_string));
+    EXPECT_STREQ(b.GetBuffer(), test_string);
+
+    BaseClass c = b;
+
+    EXPECT_EQ(b.GetBufferSize(), c.GetBufferSize());
+    EXPECT_STREQ(b.GetBuffer(), c.GetBuffer());
+
+    BaseClass d(b);
+
+    EXPECT_EQ(b.GetBufferSize(), d.GetBufferSize());
+    EXPECT_STREQ(b.GetBuffer(), d.GetBuffer());
+
+    d.SetBuffer(new_string, sizeof(new_string));
+
+    EXPECT_NE(b.GetBufferSize(), d.GetBufferSize());
+    EXPECT_STRNE(b.GetBuffer(), d.GetBuffer());
+}
+
 //TEST(BaseClass, Destructor) {
 //
 //    BaseClass *b = new BaseClass();

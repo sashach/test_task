@@ -24,6 +24,7 @@
 #include "test_class.h"
 #include <cstring>
 #include <limits>
+#include <bitset>
 
 /*
  *------------------------------------------------------------------------------
@@ -172,6 +173,23 @@ void BaseClass::SetBuffer(const char* buffer, const size_t size)
         size_ = size;
     }
 } /* -----  end of method BaseClass::SetBuffer  (sets buffer_ and size_) ---- */
+
+void BaseClass::SetBitInS(const size_t bit_number)
+{
+    int32_t bit_to_set = 1;
+    bit_to_set = bit_to_set << bit_number;
+    SetS(GetS() | bit_to_set);
+}
+
+bool BaseClass::IsSetBitInS(const size_t bit_number) const
+{
+    return std::bitset<sizeof(GetS())*8>(GetS()).test(bit_number);
+}
+
+bool BaseClass::IsEvenS() const
+{
+    return GetS() % 2 == 0;
+}
 
 /*
  *------------------------------------------------------------------------------

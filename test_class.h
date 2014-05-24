@@ -45,6 +45,9 @@ public:
     void SetBuffer(const char* buffer, const size_t size) 
             throw (std::logic_error);
     void SetS(const int32_t s);
+    void SetBitInS(const size_t bit_number);
+    bool IsSetBitInS(const size_t bit_number) const;
+    bool IsEvenS() const;
 }; /* -----  end of class BaseClass  ----- */
 
 

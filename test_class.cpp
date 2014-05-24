@@ -23,6 +23,7 @@
 
 #include "test_class.h"
 #include <cstring>
+#include <limits>
 
 /*
  *------------------------------------------------------------------------------
@@ -135,6 +136,18 @@ void BaseClass::SetS(const int32_t s)
 void BaseClass::SetBuffer(const char* buffer, const size_t size)
         throw (std::logic_error)
 {
+    if(buffer == nullptr && size != 0)
+    {
+        throw std::logic_error("Buffer is pointer to nullptr, but size is not zero");
+    }
+    if(buffer != nullptr && size == 0)
+    {
+        throw std::logic_error("Buffer not is pointer to nullptr, but size is zero");
+    }
+    if(size >= std::numeric_limits<size_t>::max())
+    {
+        throw std::logic_error("Size has unacceptable value.");
+    }
     if(buffer == nullptr)
     {
         buffer_ = nullptr;

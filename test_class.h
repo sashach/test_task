@@ -14,6 +14,9 @@
  * =====================================================================================
  */
 
+#include <cstdint>
+#include <cstdio>
+using std::size_t;
 
 /*-----------------------------------------------------------------------------
  *  You can edit this file to complete all test tasks.
@@ -27,7 +30,18 @@
  */
 class BaseClass
 {
-
+    int32_t s_;
+    char* buffer_;
+    size_t size_;
+public:
+    BaseClass();
+    int32_t GetS();
+    size_t GetBufferSize();
+    char* GetBuffer();
+    void setS(int32_t s);
+    void setBufferSize(size_t size);
+    void setBuffer(char* buffer);
+    
 }; /* -----  end of class BaseClass  ----- */
 
 

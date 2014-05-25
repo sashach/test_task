@@ -163,17 +163,18 @@ TEST(DerivedClass, Inheritance) {
     EXPECT_EQ(c.GetCharA(), 'A');
     EXPECT_EQ(c.GetCharB(), 'B');
 }
-//
-//TEST(GetValue, template_function) {
-//    ClassA a;
-//    EXPECT_EQ(GetValue < ClassA >(a), 222);
-//
-//    ClassB b;
-//    EXPECT_EQ(GetValue < ClassB >(b), 333);
-//
-//    ClassD d;
-//    EXPECT_EQ(GetValue < ClassD >(d), 555);
-//}
+
+TEST(GetValue, template_function) {
+    ClassA a;
+    EXPECT_EQ(GetValue < ClassA >(a), 222);
+
+    ClassB b;
+    EXPECT_EQ(GetValue < ClassB >(b), 333);
+
+    ClassD d;
+    EXPECT_EQ(GetValue < ClassD >(d), 555);
+}
+
 //
 //TEST(Coordinates, template_class) {
 //    Coordinates <int> a(10, 10);

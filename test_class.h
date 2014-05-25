@@ -139,9 +139,8 @@ class ClassB: public ClassA
  *  Description:  
  * =====================================================================================
  */
-class ClassC
+class ClassC: public ClassB
 {
-
 }; /* -----  end of class ClassC  ----- */
 
 /*

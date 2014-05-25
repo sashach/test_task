@@ -149,7 +149,7 @@ class ClassC: public ClassB
  *  Description:  
  * =====================================================================================
  */
-class ClassD
+class ClassD: public Interface
 {
 
 }; /* -----  end of class ClassD  ----- */

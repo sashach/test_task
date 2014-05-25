@@ -145,24 +145,24 @@ TEST(DataStorageTest, algorithm) {
     EXPECT_EQ(s.FindItemPosition(99), -1);
     EXPECT_EQ(s.FindItemPosition(24), 1);
 }
-//
-//using namespace MyNamespace;
-//
-//TEST(DerivedClass, Inheritance) {
-//    ClassA a;
-//    EXPECT_EQ(a.GetSomeIntValue(), 222);
-//
-//    ClassB b;
-//    EXPECT_EQ(b.GetSomeIntValue(), 333);
-//
-//    ClassA *ab = new ClassB();
-//    EXPECT_EQ(ab->GetSomeIntValue(), 333);
-//    delete ab;
-//
-//    ClassC c;
-//    EXPECT_EQ(c.GetCharA(), 'A');
-//    EXPECT_EQ(c.GetCharB(), 'B');
-//}
+
+using namespace MyNamespace;
+
+TEST(DerivedClass, Inheritance) {
+    ClassA a;
+    EXPECT_EQ(a.GetSomeIntValue(), 222);
+
+    ClassB b;
+    EXPECT_EQ(b.GetSomeIntValue(), 333);
+
+    ClassA *ab = new ClassB();
+    EXPECT_EQ(ab->GetSomeIntValue(), 333);
+    delete ab;
+
+    ClassC c;
+    EXPECT_EQ(c.GetCharA(), 'A');
+    EXPECT_EQ(c.GetCharB(), 'B');
+}
 //
 //TEST(GetValue, template_function) {
 //    ClassA a;

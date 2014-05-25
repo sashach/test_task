@@ -118,7 +118,7 @@ class ClassA: public Interface
  *  Description:  
  * =====================================================================================
  */
-class ClassB
+class ClassB: public ClassA
 {
     public:
 

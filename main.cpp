@@ -175,17 +175,16 @@ TEST(GetValue, template_function) {
     EXPECT_EQ(GetValue < ClassD >(d), 555);
 }
 
-//
-//TEST(Coordinates, template_class) {
-//    Coordinates <int> a(10, 10);
-//    Coordinates <double> b(20.555, 20.555);
-//
-//    EXPECT_EQ(a.GetX(), 10);
-//    EXPECT_EQ(a.GetY(), 10);
-//
-//    EXPECT_EQ(b.GetX(), 20.555);
-//    EXPECT_EQ(b.GetY(), 20.555);
-//}
+TEST(Coordinates, template_class) {
+    Coordinates <int> a(10, 10);
+    Coordinates <double> b(20.555, 20.555);
+
+    EXPECT_EQ(a.GetX(), 10);
+    EXPECT_EQ(a.GetY(), 10);
+
+    EXPECT_EQ(b.GetX(), 20.555);
+    EXPECT_EQ(b.GetY(), 20.555);
+}
 
 /* 
  * ===  FUNCTION  ======================================================================

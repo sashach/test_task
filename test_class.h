@@ -96,6 +96,10 @@ class Interface
 class ClassA: public Interface
 {
     public:
+        void DummyFunction()
+        {
+        }
+        
         int GetSomeIntValue()
         {
             return 222;
@@ -104,7 +108,7 @@ class ClassA: public Interface
         char GetCharA()
         {
             return 'A';
-        };
+        }
 
 }; /* -----  end of class ClassA  ----- */
 

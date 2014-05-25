@@ -120,31 +120,31 @@ TEST(BaseClass, BitOperations) {
     b.SetS(11);
     EXPECT_FALSE(b.IsEvenS());
 }
-//
-//TEST(DataStorageTest, algorithm) {
-//    StorageClass s;
-//
-//    std::vector<int> v1 = {1, 2, 3, 4};
-//    s.SetData(v1); 
-//    EXPECT_EQ(s.GetDataSize(), 4);
-//
-//    std::vector<int> v2 = {11, 2, 31, 24, 16};
-//    s.SetData(v2); 
-//    EXPECT_EQ(s.GetDataSize(), 5);
-//
-//    EXPECT_EQ(s.GetDataAt(3), 24);
-//	EXPECT_THROW(s.GetDataAt(10), std::logic_error);
-//
-//    s.SortData(); // sorting descending
-//    EXPECT_EQ(s.GetDataAt(0), 31);
-//    EXPECT_EQ(s.GetDataAt(1), 24);
-//    EXPECT_EQ(s.GetDataAt(2), 16);
-//    EXPECT_EQ(s.GetDataAt(3), 11);
-//    EXPECT_EQ(s.GetDataAt(4), 2);
-//
-//    EXPECT_EQ(s.FindItemPosition(99), -1);
-//    EXPECT_EQ(s.FindItemPosition(24), 1);
-//}
+
+TEST(DataStorageTest, algorithm) {
+    StorageClass s;
+
+    std::vector<int> v1 = {1, 2, 3, 4};
+    s.SetData(v1); 
+    EXPECT_EQ(s.GetDataSize(), 4);
+
+    std::vector<int> v2 = {11, 2, 31, 24, 16};
+    s.SetData(v2); 
+    EXPECT_EQ(s.GetDataSize(), 5);
+
+    EXPECT_EQ(s.GetDataAt(3), 24);
+	EXPECT_THROW(s.GetDataAt(10), std::logic_error);
+
+    s.SortData(); // sorting descending
+    EXPECT_EQ(s.GetDataAt(0), 31);
+    EXPECT_EQ(s.GetDataAt(1), 24);
+    EXPECT_EQ(s.GetDataAt(2), 16);
+    EXPECT_EQ(s.GetDataAt(3), 11);
+    EXPECT_EQ(s.GetDataAt(4), 2);
+
+    EXPECT_EQ(s.FindItemPosition(99), -1);
+    EXPECT_EQ(s.FindItemPosition(24), 1);
+}
 //
 //using namespace MyNamespace;
 //

@@ -84,6 +84,7 @@ class Interface
 {
     public:
         virtual void DummyFunction() = 0;
+        virtual int GetSomeIntValue() = 0;
 }; /* -----  end of class Interface  ----- */
 
 /*

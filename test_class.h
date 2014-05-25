@@ -162,6 +162,11 @@ public:
     }
 }; /* -----  end of class ClassD  ----- */
 
+template<class T>
+int GetValue(T& object)
+{
+    object.GetSomeIntValue();
+}
 
 class Coordinates
 {

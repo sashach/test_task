@@ -121,11 +121,15 @@ class ClassA: public Interface
 class ClassB: public ClassA
 {
     public:
-
         char GetCharB()
         {
             return 'B';
-        };
+        }
+        
+        int GetSomeIntValue()
+        {
+            return 333;
+        }
 
 }; /* -----  end of class ClassB  ----- */
 

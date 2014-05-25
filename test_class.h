@@ -173,10 +173,44 @@ template<class T>
 int GetValue(const T& object)
 {
     return object.GetSomeIntValue();
-}
+} /* ----------  end of function GetValue  ---------- */
 
+/*
+ * =============================================================================
+ *        Class:  Coordinates
+ *  Description:  template class for coordinates
+ * =============================================================================
+ */
+template<typename T>
 class Coordinates
-{
-
-};
+{   
+    T x_;
+    T y_;
+    
+    void SetX(const T x)
+    {
+        x_ = x;
+    }
+    
+    void SetY(const T y)
+    {
+        y_ = y;
+    }
+public:
+    Coordinates(T x, T y)
+    {
+        SetX(x);
+        SetY(y);
+    }
+    
+    T GetX()
+    {
+        return x_;
+    }
+    
+    T GetY()
+    {
+        return y_;
+    }
+}; /* -----  end of class ClassD  ----- */
 

@@ -151,7 +151,15 @@ class ClassC: public ClassB
  */
 class ClassD: public Interface
 {
-
+public:
+    void DummyFunction()
+    {
+    }
+    
+    int GetSomeIntValue()
+    {
+        return 555;
+    }
 }; /* -----  end of class ClassD  ----- */
 
 

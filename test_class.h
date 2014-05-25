@@ -84,7 +84,7 @@ class Interface
 {
     public:
         virtual void DummyFunction() = 0;
-        virtual int GetSomeIntValue() = 0;
+        virtual int GetSomeIntValue() const = 0;
 }; /* -----  end of class Interface  ----- */
 
 /*
@@ -100,12 +100,12 @@ class ClassA: public Interface
         {
         }
         
-        int GetSomeIntValue()
+        int GetSomeIntValue() const
         {
             return 222;
         };
 
-        char GetCharA()
+        char GetCharA() const
         {
             return 'A';
         }
@@ -121,12 +121,12 @@ class ClassA: public Interface
 class ClassB: public ClassA
 {
     public:
-        char GetCharB()
+        char GetCharB() const
         {
             return 'B';
         }
         
-        int GetSomeIntValue()
+        int GetSomeIntValue() const
         {
             return 333;
         }
@@ -156,7 +156,7 @@ public:
     {
     }
     
-    int GetSomeIntValue()
+    int GetSomeIntValue() const
     {
         return 555;
     }

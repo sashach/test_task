@@ -82,9 +82,9 @@ namespace MyNamespace
  */
 class Interface
 {
-    public:
-        virtual void DummyFunction() = 0;
-        virtual int GetSomeIntValue() const = 0;
+public:
+    virtual void DummyFunction() = 0;
+    virtual int GetSomeIntValue() const = 0;
 }; /* -----  end of class Interface  ----- */
 
 /*
@@ -95,21 +95,20 @@ class Interface
  */
 class ClassA: public Interface
 {
-    public:
-        void DummyFunction()
-        {
-        }
-        
-        int GetSomeIntValue() const
-        {
-            return 222;
-        };
+public:
+    void DummyFunction()
+    {
+    }
 
-        char GetCharA() const
-        {
-            return 'A';
-        }
+    int GetSomeIntValue() const
+    {
+        return 222;
+    };
 
+    char GetCharA() const
+    {
+        return 'A';
+    }
 }; /* -----  end of class ClassA  ----- */
 
 /*
@@ -120,17 +119,16 @@ class ClassA: public Interface
  */
 class ClassB: public ClassA
 {
-    public:
-        char GetCharB() const
-        {
-            return 'B';
-        }
-        
-        int GetSomeIntValue() const
-        {
-            return 333;
-        }
+public:
+    char GetCharB() const
+    {
+        return 'B';
+    }
 
+    int GetSomeIntValue() const
+    {
+        return 333;
+    }
 }; /* -----  end of class ClassB  ----- */
 
 /*

@@ -13,6 +13,7 @@ You can edit files in your favorite editor.
 To make the project and run all tests:
 ./make
 
+Please do not commit resolved task here, send it by mail in archive.
 
 ======================================
 
@@ -27,3 +28,5 @@ To make the project and run all tests:
 
 Для сборки проекта и запуска тестов:
 ./make
+
+Пожалуйста не комиттьте решение задачи, отправьте архив с решенным заданием по почте.

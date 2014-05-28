@@ -13,7 +13,7 @@ You can edit files in your favorite editor.
 To make the project and run all tests:
 ./make
 
-Please do not commit resolved task here, send it by mail in archive.
+Please do not commit resolved task here, send it to chebotarsky (at) gmail . com in archive.
 
 ======================================
 
@@ -29,4 +29,4 @@ Please do not commit resolved task here, send it by mail in archive.
 Для сборки проекта и запуска тестов:
 ./make
 
-Пожалуйста не комиттьте решение задачи, отправьте архив с решенным заданием по почте.
+Пожалуйста не комиттьте решение задачи, отправьте архив с решенным заданием по почте chebotarsky (at) gmail . com
